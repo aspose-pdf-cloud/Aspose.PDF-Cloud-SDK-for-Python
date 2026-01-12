@@ -10,8 +10,5 @@
 				"python.testing.unittestEnabled": true
 			}
 		}
-	},
-	"mounts": [
-		"source=${localWorkspaceFolder}/../../Settings,target=/Settings,type=bind,consistency=cached"
-	]
+	}
 }
