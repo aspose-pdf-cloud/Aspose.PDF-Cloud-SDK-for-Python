@@ -29,7 +29,12 @@ XLS, XLSX, PPTX, DOC, DOCX, MobiXML, JPEG, EMF, PNG, BMP, GIF, TIFF, Text
 
 ## Read PDF Formats
 MHT, PCL, PS, XSLFO, MD
-{ASPOSE_RELEASE_NOTES}
+
+## Enhancements in Version 26.1
+- A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
+
+## Bugs fixed in Version 26.1
+- Swagger UI shows errors when opening the block TextBoxFieldResponse.
 
 ## Requirements.
 Python 2.7 and 3.4+
