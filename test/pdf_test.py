@@ -2875,6 +2875,41 @@ class PdfTests(unittest.TestCase):
         response = self.pdf_api.put_pdf_in_request_to_mobi_xml(self.temp_folder + '/' + result_file_name, **opts)
         self.assertEqual(response.code, 200)
 
+    # To Aps
+    def testGetPdfInStorageToAps(self):
+        file_name = '5pages.pdf'
+        self.uploadFile(file_name)
+        
+        opts = {
+              "folder" : self.temp_folder
+        }
+
+        response = self.pdf_api.get_pdf_in_storage_to_aps(file_name, **opts)
+        self.assertIsInstance(response, str)
+
+    def testPutPdfInStorageToAps(self):
+        file_name = '5pages.pdf'
+        self.uploadFile(file_name)
+        result_file_name = "result.xml"
+
+        opts = {
+              "folder" : self.temp_folder
+        }
+
+        response = self.pdf_api.put_pdf_in_storage_to_aps(file_name, self.temp_folder + '/' + result_file_name, **opts)
+        self.assertEqual(response.code, 200)
+
+    def testPutPdfInRequestToAps(self):
+        file_name = '5pages.pdf'
+        result_file_name = "result.xml"
+
+        opts = {
+              "file" : self.test_data_path + file_name
+        }
+
+        response = self.pdf_api.put_pdf_in_request_to_aps(self.temp_folder + '/' + result_file_name, **opts)
+        self.assertEqual(response.code, 200)
+
     # PDF Xfa To Acro Form
     def testGetXfaPdfInStorageToAcroForm(self):
         file_name = 'PdfWithXfaForm.pdf'
@@ -3173,6 +3208,27 @@ class PdfTests(unittest.TestCase):
             "dst_folder" : self.temp_folder
         }
         response = self.pdf_api.put_xml_in_storage_to_pdf(result_name, src_path, **opts)
+        self.assertEqual(response.code, 200)
+
+    def testGetApsInStorageToPdf(self):
+        file_name = '5pages.aps'
+        self.uploadFile(file_name)
+
+        src_path = self.temp_folder + '/' + file_name
+        response = self.pdf_api.get_aps_in_storage_to_pdf(src_path)
+        self.assertIsInstance(response, str)
+
+
+    def testPutApsInStorageToPdf(self):
+        file_name = '5pages.aps'
+        self.uploadFile(file_name)
+        result_name = 'fromXml.pdf'
+
+        src_path = self.temp_folder + '/' + file_name
+        opts = {
+            "dst_folder" : self.temp_folder
+        }
+        response = self.pdf_api.put_aps_in_storage_to_pdf(result_name, src_path, **opts)
         self.assertEqual(response.code, 200)
 
     def testGetPsInStorageToPdf(self):
