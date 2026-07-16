@@ -3,7 +3,6 @@
   ```bash
   python Uses-Cases/Annotations/annotations_launch.py
   ```
-- *[Annotations/annotations_helper.py](Annotations/annotations_helper.py)* – Provides configuration, API client initialization, and helper methods for PDF annotation tasks.
 - *[Annotations/delete_page_annotations.py](Annotations/delete_page_annotations.py)* – Deletes all annotations from a specific page in a PDF document.
 - *[Annotations/delete_text_annotation.py](Annotations/delete_text_annotation.py)* – Deletes a specific text annotation and its associated popup from a PDF.
 - *[Annotations/get_annotation_by_id.py](Annotations/get_annotation_by_id.py)* – Retrieves a specific annotation by its ID from a PDF document.
@@ -51,7 +50,6 @@
   ```bash
   python Uses-Cases/ChangeLayout/change_layout_launch.py
   ```
-- *[ChangeLayout/change_layout_helper.py](ChangeLayout/change_layout_helper.py)* – Provides configuration, API client initialization, and helper methods for PDF layout change tasks.
 - *[ChangeLayout/crop_document_page.py](ChangeLayout/crop_document_page.py)* – Crops a specific page in a PDF document to a defined rectangle.
 - *[ChangeLayout/resize_document_all_pages.py](ChangeLayout/resize_document_all_pages.py)* – Resizes all pages in a PDF document by converting to HTML and back.
 - *[ChangeLayout/rotate_documents_pages.py](ChangeLayout/rotate_documents_pages.py)* – Rotates a specified range of pages in a PDF document.
@@ -62,7 +60,6 @@
   python Uses-Cases/Compares/compares_launch.py
   ```
 - *[Compares/compare_pdf_documents.py](Compares/compare_pdf_documents.py)* – Performs the core comparison operation between two PDF documents.
-- *[Compares/compares_helper.py](Compares/compares_helper.py)* – Provides configuration, API client initialization, and helper methods for PDF comparison tasks.
 
 #### CompressDocument
 - **[CompressDocument/compressPdf.py](CompressDocument/compressPdf.py)** – Compresses a PDF document by optimizing images and removing unused objects.
@@ -88,6 +85,24 @@
 - **[EncryptDecrypt/encryptDocument.py](EncryptDecrypt/encryptDocument.py)** – Encrypts a PDF document with user and owner passwords using a specified algorithm.
   ```bash
   python Uses-Cases/EncryptDecrypt/encryptDocument.py
+  ```
+
+#### HeaderFooter
+- **[HeaderFooter/appendImageFooter.py](HeaderFooter/appendImageFooter.py)** – Appends image footers to a PDF document and to specific pages.
+  ```bash
+  python Uses-Cases/HeaderFooter/appendImageFooter.py
+  ```
+- **[HeaderFooter/appendImageHeader.py](HeaderFooter/appendImageHeader.py)** – Appends image headers to a PDF document and to specific pages.
+  ```bash
+  python Uses-Cases/HeaderFooter/appendImageHeader.py
+  ```
+- **[HeaderFooter/appendTextFooter.py](HeaderFooter/appendTextFooter.py)** – Appends text footers to a PDF document and to specific pages.
+  ```bash
+  python Uses-Cases/HeaderFooter/appendTextFooter.py
+  ```
+- **[HeaderFooter/appendTextHeader.py](HeaderFooter/appendTextHeader.py)** – Appends text headers to a PDF document and to specific pages.
+  ```bash
+  python Uses-Cases/HeaderFooter/appendTextHeader.py
   ```
 
 #### Links
@@ -144,7 +159,6 @@
 - *[Parser/get_tables.py](Parser/get_tables.py)* – Extracts tables from a PDF document.
 - *[Parser/get_textboxes.py](Parser/get_textboxes.py)* – Extracts text box fields from a PDF document.
 - *[Parser/get_xml.py](Parser/get_xml.py)* – Extracts PDF form field data and exports it to an XML file.
-- *[Parser/paresr_helpers.py](Parser/paresr_helpers.py)* – Provides configuration, API client initialization, and helper methods for PDF parsing tasks.
 
 #### Signatures
 - **[Signatures/addDocumentSignature.py](Signatures/addDocumentSignature.py)** – Appends a new digital signature field to a PDF document.
