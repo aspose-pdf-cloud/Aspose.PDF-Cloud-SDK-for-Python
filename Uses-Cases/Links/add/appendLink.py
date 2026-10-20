@@ -1,15 +1,28 @@
-import shutil
 import json
 import logging
+import shutil
 from pathlib import Path
-from asposepdfcloud import ApiClient, PdfApi, LinkAnnotation, LinkActionType, LinkHighlightingMode, Color, Link, Rectangle
+
+from asposepdfcloud import (
+    ApiClient,
+    Color,
+    Link,
+    LinkActionType,
+    LinkAnnotation,
+    LinkHighlightingMode,
+    PdfApi,
+    Rectangle,
+)
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
 class Config:
     """Configuration parameters."""
+
     CREDENTIALS_FILE = Path(r"settings/credentials.json")
     LOCAL_FOLDER = Path(r"test_data")
     PDF_DOCUMENT_NAME = "sample.pdf"
@@ -21,6 +34,7 @@ class Config:
 
 class PdfLinks:
     """Class for managing PDF links using Aspose PDF Cloud API."""
+
     def __init__(self, credentials_file: Path = Config.CREDENTIALS_FILE):
         self.pdf_api = None
         self._init_api(credentials_file)
@@ -30,9 +44,14 @@ class PdfLinks:
         try:
             with credentials_file.open("r", encoding="utf-8") as file:
                 credentials = json.load(file)
-                api_key, app_id = credentials.get("client_secret"), credentials.get("client_id")
+                api_key, app_id = (
+                    credentials.get("client_secret"),
+                    credentials.get("client_id"),
+                )
                 if not api_key or not app_id:
-                    raise ValueError("init_api(): Error: Missing API keys in the credentials file.")
+                    raise ValueError(
+                        "init_api(): Error: Missing API keys in the credentials file."
+                    )
                 self.pdf_api = PdfApi(ApiClient(api_key, app_id))
         except (FileNotFoundError, json.JSONDecodeError, ValueError) as e:
             logging.error(f"init_api(): Failed to load credentials: {e}")
@@ -43,7 +62,9 @@ class PdfLinks:
             file_path = Config.LOCAL_FOLDER / Config.PDF_DOCUMENT_NAME
             try:
                 self.pdf_api.upload_file(Config.PDF_DOCUMENT_NAME, str(file_path))
-                logging.info(f"upload_document(): File {Config.PDF_DOCUMENT_NAME} uploaded successfully.")
+                logging.info(
+                    f"upload_document(): File {Config.PDF_DOCUMENT_NAME} uploaded successfully."
+                )
             except Exception as e:
                 logging.error(f"upload_document(): Failed to upload file: {e}")
 
@@ -54,7 +75,9 @@ class PdfLinks:
                 temp_file = self.pdf_api.download_file(Config.PDF_DOCUMENT_NAME)
                 local_path = Config.LOCAL_FOLDER / Config.LOCAL_RESULT_DOCUMENT_NAME
                 shutil.move(temp_file, str(local_path))
-                logging.info(f"download_result(): File successfully downloaded: {local_path}")
+                logging.info(
+                    f"download_result(): File successfully downloaded: {local_path}"
+                )
             except Exception as e:
                 logging.error(f"download_result(): Failed to download file: {e}")
 
@@ -63,7 +86,7 @@ class PdfLinks:
         if self.pdf_api:
             link_annotation = LinkAnnotation(
                 links=[Link(href=Config.NEW_LINK_ACTION)],
-                action_type= LinkActionType.GOTOURIACTION,
+                action_type=LinkActionType.GOTOURIACTION,
                 action=Config.NEW_LINK_ACTION,
                 highlighting=LinkHighlightingMode.INVERT,
                 color=Color(a=255, r=0, g=255, b=0),
@@ -75,9 +98,13 @@ class PdfLinks:
                     Config.PDF_DOCUMENT_NAME, Config.PAGE_NUMBER, [link_annotation]
                 )
                 if response.code == 200:
-                    logging.info(f"append_link(): Link '{Config.NEW_LINK_ACTION}' added to page #{Config.PAGE_NUMBER}.")
+                    logging.info(
+                        f"append_link(): Link '{Config.NEW_LINK_ACTION}' added to page #{Config.PAGE_NUMBER}."
+                    )
                 else:
-                    logging.error(f"append_link(): Failed to add link to the page. Response code: {response.code}")
+                    logging.error(
+                        f"append_link(): Failed to add link to the page. Response code: {response.code}"
+                    )
             except Exception as e:
                 logging.error(f"append_link(): Error while adding link: {e}")
 

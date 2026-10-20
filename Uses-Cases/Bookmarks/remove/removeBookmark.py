@@ -1,15 +1,19 @@
-import shutil
 import json
 import logging
+import shutil
 from pathlib import Path
-from asposepdfcloud import ApiClient, PdfApi, AsposeResponse
+
+from asposepdfcloud import ApiClient, AsposeResponse, PdfApi
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
 class Config:
     """Configuration parameters."""
+
     CREDENTIALS_FILE = Path(r"settings/credentials.json")
     LOCAL_FOLDER = Path(r"test_data")
     PDF_DOCUMENT_NAME = "PdfWithBookmarks.pdf"
@@ -29,7 +33,10 @@ class PdfBookmarks:
         try:
             with credentials_file.open("r", encoding="utf-8") as file:
                 credentials = json.load(file)
-                api_key, app_id = credentials.get("client_secret"), credentials.get("client_id")
+                api_key, app_id = (
+                    credentials.get("client_secret"),
+                    credentials.get("client_id"),
+                )
                 if not api_key or not app_id:
                     raise ValueError("Error: Missing API keys in the credentials file.")
                 self.pdf_api = PdfApi(ApiClient(api_key, app_id))
@@ -53,18 +60,27 @@ class PdfBookmarks:
                 temp_file = self.pdf_api.download_file(Config.PDF_DOCUMENT_NAME)
                 local_path = Config.LOCAL_FOLDER / Config.LOCAL_RESULT_DOCUMENT_NAME
                 shutil.move(temp_file, str(local_path))
-                logging.info(f"download_result(): File successfully downloaded: {local_path}")
+                logging.info(
+                    f"download_result(): File successfully downloaded: {local_path}"
+                )
             except Exception as e:
                 logging.error(f"download_result(): Failed to download file: {e}")
 
     def remove_bookmark_by_path(self):
         if self.pdf_api:
-            response: AsposeResponse = self.pdf_api.delete_bookmark(Config.PDF_DOCUMENT_NAME, Config.BOOKMARK_PATH)
+            response: AsposeResponse = self.pdf_api.delete_bookmark(
+                Config.PDF_DOCUMENT_NAME, Config.BOOKMARK_PATH
+            )
 
             if response.code == 200:
-                logging.info(f"Bookmark with path: '{Config.BOOKMARK_PATH}' has been removed.")
+                logging.info(
+                    f"Bookmark with path: '{Config.BOOKMARK_PATH}' has been removed."
+                )
             else:
-                logging.erro(f"Failed to remove bookmark with path: '{Config.LINK_FIND_ID}")
+                logging.erro(
+                    f"Failed to remove bookmark with path: '{Config.LINK_FIND_ID}"
+                )
+
 
 if __name__ == "__main__":
     pdf_bookmarks = PdfBookmarks()

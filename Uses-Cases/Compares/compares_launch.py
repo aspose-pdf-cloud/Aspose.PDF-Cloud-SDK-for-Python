@@ -1,5 +1,5 @@
+from compare_pdf_documents import ComparePdfDocuments, Config
 from compares_helper import CompareMain
-from compare_pdf_documents import Config, ComparePdfDocuments
 
 if __name__ == "__main__":
     comparator = CompareMain(Config.CREDENTIALS_FILE)

@@ -1,13 +1,22 @@
-import shutil
 import json
 import logging
+import shutil
 from pathlib import Path
-from asposepdfcloud import ApiClient, PdfApi, Table, Row, Cell, FontStyles, GraphInfo, TextRect, TextState, Color, BorderInfo
+
+from asposepdfcloud import (
+    ApiClient,
+    PdfApi,
+)
+
 # Configure logging
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
 
 class Config:
     """Configuration parameters."""
+
     CREDENTIALS_FILE = Path(r"settings/credentials.json")
     LOCAL_FOLDER = Path(r"test_data")
     PDF_DOCUMENT_NAME = "PdfWithTable.pdf"
@@ -15,52 +24,64 @@ class Config:
     PAGE_NUMBER = 1
     TABLE_ID = "GE5TIMJ3HEYCYOBTFQ2TANZMG43TA"
 
+
 class PdfTables:
-    """ Class for managing PDF tables using Aspose PDF Cloud API. """
+    """Class for managing PDF tables using Aspose PDF Cloud API."""
+
     def __init__(self, credentials_file: Path = Config.CREDENTIALS_FILE):
         self.pdf_api = None
         self._init_api(credentials_file)
 
     def _init_api(self, credentials_file: Path):
-        """ Initialize the API client. """
+        """Initialize the API client."""
         try:
             with credentials_file.open("r", encoding="utf-8") as file:
                 credentials = json.load(file)
-                api_key, app_id = credentials.get("client_secret"), credentials.get("client_id")
+                api_key, app_id = (
+                    credentials.get("client_secret"),
+                    credentials.get("client_id"),
+                )
                 if not api_key or not app_id:
-                    raise ValueError("init_api(): Error: Missing API keys in the credentials file.")
+                    raise ValueError(
+                        "init_api(): Error: Missing API keys in the credentials file."
+                    )
                 self.pdf_api = PdfApi(ApiClient(api_key, app_id))
         except (FileNotFoundError, json.JSONDecodeError, ValueError) as e:
             logging.error(f"init_api(): Failed to load credentials: {e}")
 
     def upload_document(self):
-        """ Upload a PDF document to the Aspose Cloud server. """
+        """Upload a PDF document to the Aspose Cloud server."""
         if self.pdf_api:
             file_path = Config.LOCAL_FOLDER / Config.PDF_DOCUMENT_NAME
             try:
                 self.pdf_api.upload_file(Config.PDF_DOCUMENT_NAME, str(file_path))
-                logging.info(f"upload_document(): File {Config.PDF_DOCUMENT_NAME} uploaded successfully.")
+                logging.info(
+                    f"upload_document(): File {Config.PDF_DOCUMENT_NAME} uploaded successfully."
+                )
             except Exception as e:
                 logging.error(f"upload_document(): Failed to upload file: {e}")
 
     def download_result(self):
-        """ Download the processed PDF document from the Aspose Cloud server. """
+        """Download the processed PDF document from the Aspose Cloud server."""
         if self.pdf_api:
             try:
                 temp_file = self.pdf_api.download_file(Config.PDF_DOCUMENT_NAME)
                 local_path = Config.LOCAL_FOLDER / Config.LOCAL_RESULT_DOCUMENT_NAME
                 shutil.move(temp_file, str(local_path))
-                logging.info(f"download_result(): File successfully downloaded: {local_path}")
+                logging.info(
+                    f"download_result(): File successfully downloaded: {local_path}"
+                )
             except Exception as e:
                 logging.error(f"download_result(): Failed to download file: {e}")
 
-
     def _show_tables_info(self, tables, prefix):
-        if tables and len(tables) > 0 :
+        if tables and len(tables) > 0:
             for table in tables:
-                logging.info(f"{prefix} => id: '{table.id}', page: '{table.page_num}', rows: '{len(table.row_list)}', columns: '{len(table.row_list[0].cell_list)}'")
+                logging.info(
+                    f"{prefix} => id: '{table.id}', page: '{table.page_num}', rows: '{len(table.row_list)}', columns: '{len(table.row_list[0].cell_list)}'"
+                )
         else:
-            logging.error(f"_show_tables_info() error: array of tables is empty!")
+            logging.error("_show_tables_info() error: array of tables is empty!")
 
     def get_all_tables(self, prefix):
         if self.pdf_api:
@@ -68,14 +89,18 @@ class PdfTables:
 
             if resultTabs.code == 200 and resultTabs.tables:
                 if not resultTabs.tables.list or len(resultTabs.tables.list) == 0:
-                    logging.error("get_all_tables(): Unexpected error - tables is null or empty!!!")
+                    logging.error(
+                        "get_all_tables(): Unexpected error - tables is null or empty!!!"
+                    )
                 self._show_tables_info(resultTabs.tables.list, prefix)
             else:
                 logging.error("get_all_tables(): Unexpected error - can't get links!!!")
 
     def delete_table(self):
         if self.pdf_api:
-            resultTabs = self.pdf_api.delete_table(Config.PDF_DOCUMENT_NAME, Config.TABLE_ID)
+            resultTabs = self.pdf_api.delete_table(
+                Config.PDF_DOCUMENT_NAME, Config.TABLE_ID
+            )
             if resultTabs.code == 200:
                 logging.info(f"delete_table(): Table #{Config.TABLE_ID} deleted!")
             else:
@@ -83,12 +108,17 @@ class PdfTables:
 
     def delete_tables(self):
         if self.pdf_api:
-            resultTabs = self.pdf_api.delete_page_tables(Config.PDF_DOCUMENT_NAME, Config.PAGE_NUMBER)
+            resultTabs = self.pdf_api.delete_page_tables(
+                Config.PDF_DOCUMENT_NAME, Config.PAGE_NUMBER
+            )
 
             if resultTabs.code == 200:
-                logging.info(f"delete_tables(): Tables on page #{Config.PAGE_NUMBER} deleted!")
+                logging.info(
+                    f"delete_tables(): Tables on page #{Config.PAGE_NUMBER} deleted!"
+                )
             else:
                 logging.error("delete_tables(): Unexpected error - can't get tables!!!")
+
 
 if __name__ == "__main__":
     pdf_tables = PdfTables()

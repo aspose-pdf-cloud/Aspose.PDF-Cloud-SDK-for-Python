@@ -1,18 +1,22 @@
-import shutil
 import json
 import logging
 from pathlib import Path
-from asposepdfcloud import ApiClient, PdfApi, BookmarksResponse
+
+from asposepdfcloud import ApiClient, BookmarksResponse, PdfApi
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
 class Config:
     """Configuration parameters."""
+
     CREDENTIALS_FILE = Path(r"settings/credentials.json")
     LOCAL_FOLDER = Path(r"test_data")
     PDF_DOCUMENT_NAME = "PdfWithBookmarks.pdf"
+
 
 class PdfBookmarks:
     """Class for managing PDF bookmarks using Aspose PDF Cloud API."""
@@ -26,7 +30,10 @@ class PdfBookmarks:
         try:
             with credentials_file.open("r", encoding="utf-8") as file:
                 credentials = json.load(file)
-                api_key, app_id = credentials.get("client_secret"), credentials.get("client_id")
+                api_key, app_id = (
+                    credentials.get("client_secret"),
+                    credentials.get("client_id"),
+                )
                 if not api_key or not app_id:
                     raise ValueError("Error: Missing API keys in the credentials file.")
                 self.pdf_api = PdfApi(ApiClient(api_key, app_id))
@@ -45,21 +52,28 @@ class PdfBookmarks:
 
     def show_bookmarks_array(self, bookmarks, prefix):
         for item in bookmarks.list:
-            logging.info(f"{prefix} => level: '{item.level}' - action: '{item.action}' - title: '{item.title}'")
+            logging.info(
+                f"{prefix} => level: '{item.level}' - action: '{item.action}' - title: '{item.title}'"
+            )
             if item.bookmarks and item.bookmarks.list and len(item.bookmarks.list) > 0:
                 self.show_bookmarks_array(bookmarks=item.bookmarks, prefix=prefix)
 
     def get_all_bookmarks(self):
-        """Get all bookmarks for a specific PDF document."""    
+        """Get all bookmarks for a specific PDF document."""
         if self.pdf_api:
             try:
-                response : BookmarksResponse = self.pdf_api.get_document_bookmarks( Config.PDF_DOCUMENT_NAME)
+                response: BookmarksResponse = self.pdf_api.get_document_bookmarks(
+                    Config.PDF_DOCUMENT_NAME
+                )
                 if response.code == 200:
                     self.show_bookmarks_array(response.bookmarks, "All")
                 else:
-                    logging.error(f"Failed to get bookmarks for the document. Response code: {response.code}")
+                    logging.error(
+                        f"Failed to get bookmarks for the document. Response code: {response.code}"
+                    )
             except Exception as e:
                 logging.error(f"Error while retrieving bookmarks array: {e}")
+
 
 if __name__ == "__main__":
     pdf_bookmarks = PdfBookmarks()
