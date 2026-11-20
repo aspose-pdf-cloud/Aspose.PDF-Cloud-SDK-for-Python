@@ -7108,7 +7108,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_split_range_pdf_document**
-> SplitResultResponse post_split_range_pdf_document(name, options=options, storage=storage, folder=folder, password=password)
+> SplitResultResponse post_split_range_pdf_document(name, options, storage=storage, folder=folder, password=password)
 
 Split document into ranges.
 
@@ -7117,7 +7117,7 @@ Split document into ranges.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| The document name. | 
- **options** | [**SplitRangePdfOptions**](SplitRangePdfOptions.md)| The splitting options. | [optional] 
+ **options** | [**SplitRangePdfOptions**](SplitRangePdfOptions.md)| The splitting options. | 
  **storage** | **str**| The document storage. | [optional] 
  **folder** | **str**| The document folder. | [optional] 
  **password** | **str**| Base64 encoded password. | [optional] 

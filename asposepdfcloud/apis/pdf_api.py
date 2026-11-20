@@ -31805,7 +31805,7 @@ class PdfApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def post_split_range_pdf_document(self, name, **kwargs):
+    def post_split_range_pdf_document(self, name, options, **kwargs):
         """
         Split document into ranges.
         This method makes a synchronous HTTP request by default. To make an
@@ -31814,12 +31814,12 @@ class PdfApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.post_split_range_pdf_document(name, callback=callback_function)
+        >>> thread = api.post_split_range_pdf_document(name, options, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: The document name. (required)
-        :param SplitRangePdfOptions options: The splitting options.
+        :param SplitRangePdfOptions options: The splitting options. (required)
         :param str storage: The document storage.
         :param str folder: The document folder.
         :param str password: Base64 encoded password.
@@ -31829,12 +31829,12 @@ class PdfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.post_split_range_pdf_document_with_http_info(name, **kwargs)
+            return self.post_split_range_pdf_document_with_http_info(name, options, **kwargs)
         else:
-            (data) = self.post_split_range_pdf_document_with_http_info(name, **kwargs)
+            (data) = self.post_split_range_pdf_document_with_http_info(name, options, **kwargs)
             return data
 
-    def post_split_range_pdf_document_with_http_info(self, name, **kwargs):
+    def post_split_range_pdf_document_with_http_info(self, name, options, **kwargs):
         """
         Split document into ranges.
         This method makes a synchronous HTTP request by default. To make an
@@ -31843,12 +31843,12 @@ class PdfApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.post_split_range_pdf_document_with_http_info(name, callback=callback_function)
+        >>> thread = api.post_split_range_pdf_document_with_http_info(name, options, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: The document name. (required)
-        :param SplitRangePdfOptions options: The splitting options.
+        :param SplitRangePdfOptions options: The splitting options. (required)
         :param str storage: The document storage.
         :param str folder: The document folder.
         :param str password: Base64 encoded password.
@@ -31875,6 +31875,9 @@ class PdfApi(object):
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `post_split_range_pdf_document`")
+        # verify the required parameter 'options' is set
+        if ('options' not in params) or (params['options'] is None):
+            raise ValueError("Missing the required parameter `options` when calling `post_split_range_pdf_document`")
 
 
         collection_formats = {}

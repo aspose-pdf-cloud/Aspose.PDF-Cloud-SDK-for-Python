@@ -33,7 +33,6 @@ MHT, PCL, PS, XSLFO, MD
 ## Enhancements in Version 26.10
 - A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
 
-
 ## Requirements.
 Python 2.7 and 3.4+
 
