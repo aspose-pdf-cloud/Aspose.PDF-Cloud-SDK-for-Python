@@ -3122,7 +3122,7 @@ class PdfApi(object):
 
     def get_aps_in_storage_to_pdf(self, src_path, **kwargs):
         """
-        Convert APS file (located on storage) to PDF format and return resulting file in response. 
+        Convert APS file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3148,7 +3148,7 @@ class PdfApi(object):
 
     def get_aps_in_storage_to_pdf_with_http_info(self, src_path, **kwargs):
         """
-        Convert APS file (located on storage) to PDF format and return resulting file in response. 
+        Convert APS file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -8469,7 +8469,7 @@ class PdfApi(object):
 
     def get_epub_in_storage_to_pdf(self, src_path, **kwargs):
         """
-        Convert EPUB file (located on storage) to PDF format and return resulting file in response. 
+        Convert EPUB file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -8495,7 +8495,7 @@ class PdfApi(object):
 
     def get_epub_in_storage_to_pdf_with_http_info(self, src_path, **kwargs):
         """
-        Convert EPUB file (located on storage) to PDF format and return resulting file in response. 
+        Convert EPUB file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -9836,7 +9836,7 @@ class PdfApi(object):
 
     def get_html_in_storage_to_pdf(self, src_path, **kwargs):
         """
-        Convert HTML file (located on storage) to PDF format and return resulting file in response. 
+        Convert HTML file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -9870,7 +9870,7 @@ class PdfApi(object):
 
     def get_html_in_storage_to_pdf_with_http_info(self, src_path, **kwargs):
         """
-        Convert HTML file (located on storage) to PDF format and return resulting file in response. 
+        Convert HTML file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -11083,7 +11083,7 @@ class PdfApi(object):
 
     def get_import_fields_from_xml_in_storage(self, name, xml_file_path, **kwargs):
         """
-        Import from XML file (located on storage) to PDF format and return resulting file in response. 
+        Import from XML file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -11111,7 +11111,7 @@ class PdfApi(object):
 
     def get_import_fields_from_xml_in_storage_with_http_info(self, name, xml_file_path, **kwargs):
         """
-        Import from XML file (located on storage) to PDF format and return resulting file in response. 
+        Import from XML file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -11678,7 +11678,7 @@ class PdfApi(object):
 
     def get_markdown_in_storage_to_pdf(self, src_path, **kwargs):
         """
-        Convert MD file (located on storage) to PDF format and return resulting file in response. 
+        Convert MD file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -11704,7 +11704,7 @@ class PdfApi(object):
 
     def get_markdown_in_storage_to_pdf_with_http_info(self, src_path, **kwargs):
         """
-        Convert MD file (located on storage) to PDF format and return resulting file in response. 
+        Convert MD file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -11786,7 +11786,7 @@ class PdfApi(object):
 
     def get_mht_in_storage_to_pdf(self, src_path, **kwargs):
         """
-        Convert MHT file (located on storage) to PDF format and return resulting file in response. 
+        Convert MHT file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -11818,7 +11818,7 @@ class PdfApi(object):
 
     def get_mht_in_storage_to_pdf_with_http_info(self, src_path, **kwargs):
         """
-        Convert MHT file (located on storage) to PDF format and return resulting file in response. 
+        Convert MHT file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -16914,7 +16914,7 @@ class PdfApi(object):
 
     def get_pcl_in_storage_to_pdf(self, src_path, **kwargs):
         """
-        Convert PCL file (located on storage) to PDF format and return resulting file in response. 
+        Convert PCL file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -16940,7 +16940,7 @@ class PdfApi(object):
 
     def get_pcl_in_storage_to_pdf_with_http_info(self, src_path, **kwargs):
         """
-        Convert PCL file (located on storage) to PDF format and return resulting file in response. 
+        Convert PCL file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -17022,7 +17022,7 @@ class PdfApi(object):
 
     def get_pdf_a_in_storage_to_pdf(self, src_path, **kwargs):
         """
-        Convert PDFA file (located on storage) to PDF format and return resulting file in response. 
+        Convert PDFA file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -17049,7 +17049,7 @@ class PdfApi(object):
 
     def get_pdf_a_in_storage_to_pdf_with_http_info(self, src_path, **kwargs):
         """
-        Convert PDFA file (located on storage) to PDF format and return resulting file in response. 
+        Convert PDFA file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -19459,7 +19459,7 @@ class PdfApi(object):
 
     def get_ps_in_storage_to_pdf(self, src_path, **kwargs):
         """
-        Convert PS file (located on storage) to PDF format and return resulting file in response. 
+        Convert PS file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -19485,7 +19485,7 @@ class PdfApi(object):
 
     def get_ps_in_storage_to_pdf_with_http_info(self, src_path, **kwargs):
         """
-        Convert PS file (located on storage) to PDF format and return resulting file in response. 
+        Convert PS file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -20995,7 +20995,7 @@ class PdfApi(object):
 
     def get_svg_in_storage_to_pdf(self, src_path, **kwargs):
         """
-        Convert SVG file (located on storage) to PDF format and return resulting file in response. 
+        Convert SVG file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -21029,7 +21029,7 @@ class PdfApi(object):
 
     def get_svg_in_storage_to_pdf_with_http_info(self, src_path, **kwargs):
         """
-        Convert SVG file (located on storage) to PDF format and return resulting file in response. 
+        Convert SVG file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -21254,7 +21254,7 @@ class PdfApi(object):
 
     def get_te_x_in_storage_to_pdf(self, src_path, **kwargs):
         """
-        Convert TeX file (located on storage) to PDF format and return resulting file in response. 
+        Convert TeX file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -21280,7 +21280,7 @@ class PdfApi(object):
 
     def get_te_x_in_storage_to_pdf_with_http_info(self, src_path, **kwargs):
         """
-        Convert TeX file (located on storage) to PDF format and return resulting file in response. 
+        Convert TeX file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -21991,7 +21991,7 @@ class PdfApi(object):
 
     def get_web_in_storage_to_pdf(self, url, **kwargs):
         """
-        Convert web page to PDF format and return resulting file in response. 
+        Convert web page to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -22024,7 +22024,7 @@ class PdfApi(object):
 
     def get_web_in_storage_to_pdf_with_http_info(self, url, **kwargs):
         """
-        Convert web page to PDF format and return resulting file in response. 
+        Convert web page to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -22351,7 +22351,7 @@ class PdfApi(object):
 
     def get_xml_in_storage_to_pdf(self, src_path, **kwargs):
         """
-        Convert XML file (located on storage) to PDF format and return resulting file in response. 
+        Convert XML file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -22378,7 +22378,7 @@ class PdfApi(object):
 
     def get_xml_in_storage_to_pdf_with_http_info(self, src_path, **kwargs):
         """
-        Convert XML file (located on storage) to PDF format and return resulting file in response. 
+        Convert XML file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -22695,7 +22695,7 @@ class PdfApi(object):
 
     def get_xps_in_storage_to_pdf(self, src_path, **kwargs):
         """
-        Convert XPS file (located on storage) to PDF format and return resulting file in response. 
+        Convert XPS file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -22721,7 +22721,7 @@ class PdfApi(object):
 
     def get_xps_in_storage_to_pdf_with_http_info(self, src_path, **kwargs):
         """
-        Convert XPS file (located on storage) to PDF format and return resulting file in response. 
+        Convert XPS file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -22803,7 +22803,7 @@ class PdfApi(object):
 
     def get_xsl_fo_in_storage_to_pdf(self, src_path, **kwargs):
         """
-        Convert XslFo file (located on storage) to PDF format and return resulting file in response. 
+        Convert XslFo file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -22829,7 +22829,7 @@ class PdfApi(object):
 
     def get_xsl_fo_in_storage_to_pdf_with_http_info(self, src_path, **kwargs):
         """
-        Convert XslFo file (located on storage) to PDF format and return resulting file in response. 
+        Convert XslFo file (located on storage) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -26411,7 +26411,7 @@ class PdfApi(object):
 
     def post_html_to_pdf(self, **kwargs):
         """
-        Convert HTML file (zip archive in request content) to PDF format and return resulting file in response. 
+        Convert HTML file (zip archive in request content) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -26443,7 +26443,7 @@ class PdfApi(object):
 
     def post_html_to_pdf_with_http_info(self, **kwargs):
         """
-        Convert HTML file (zip archive in request content) to PDF format and return resulting file in response. 
+        Convert HTML file (zip archive in request content) to PDF format and return resulting file in response.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -31805,7 +31805,7 @@ class PdfApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def post_split_range_pdf_document(self, name, options, **kwargs):
+    def post_split_range_pdf_document(self, name, **kwargs):
         """
         Split document into ranges.
         This method makes a synchronous HTTP request by default. To make an
@@ -31814,12 +31814,12 @@ class PdfApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.post_split_range_pdf_document(name, options, callback=callback_function)
+        >>> thread = api.post_split_range_pdf_document(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: The document name. (required)
-        :param SplitRangePdfOptions options: The splitting options. (required)
+        :param SplitRangePdfOptions options: The splitting options.
         :param str storage: The document storage.
         :param str folder: The document folder.
         :param str password: Base64 encoded password.
@@ -31829,12 +31829,12 @@ class PdfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.post_split_range_pdf_document_with_http_info(name, options, **kwargs)
+            return self.post_split_range_pdf_document_with_http_info(name, **kwargs)
         else:
-            (data) = self.post_split_range_pdf_document_with_http_info(name, options, **kwargs)
+            (data) = self.post_split_range_pdf_document_with_http_info(name, **kwargs)
             return data
 
-    def post_split_range_pdf_document_with_http_info(self, name, options, **kwargs):
+    def post_split_range_pdf_document_with_http_info(self, name, **kwargs):
         """
         Split document into ranges.
         This method makes a synchronous HTTP request by default. To make an
@@ -31843,12 +31843,12 @@ class PdfApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.post_split_range_pdf_document_with_http_info(name, options, callback=callback_function)
+        >>> thread = api.post_split_range_pdf_document_with_http_info(name, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str name: The document name. (required)
-        :param SplitRangePdfOptions options: The splitting options. (required)
+        :param SplitRangePdfOptions options: The splitting options.
         :param str storage: The document storage.
         :param str folder: The document folder.
         :param str password: Base64 encoded password.
@@ -31875,9 +31875,6 @@ class PdfApi(object):
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `post_split_range_pdf_document`")
-        # verify the required parameter 'options' is set
-        if ('options' not in params) or (params['options'] is None):
-            raise ValueError("Missing the required parameter `options` when calling `post_split_range_pdf_document`")
 
 
         collection_formats = {}
@@ -32535,7 +32532,7 @@ class PdfApi(object):
 
     def put_aps_in_storage_to_pdf(self, name, src_path, **kwargs):
         """
-        Convert APS file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert APS file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -32563,7 +32560,7 @@ class PdfApi(object):
 
     def put_aps_in_storage_to_pdf_with_http_info(self, name, src_path, **kwargs):
         """
-        Convert APS file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert APS file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -34050,7 +34047,7 @@ class PdfApi(object):
 
     def put_epub_in_storage_to_pdf(self, name, src_path, **kwargs):
         """
-        Convert EPUB file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert EPUB file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -34078,7 +34075,7 @@ class PdfApi(object):
 
     def put_epub_in_storage_to_pdf_with_http_info(self, name, src_path, **kwargs):
         """
-        Convert EPUB file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert EPUB file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -35139,7 +35136,7 @@ class PdfApi(object):
 
     def put_html_in_storage_to_pdf(self, name, src_path, **kwargs):
         """
-        Convert HTML file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert HTML file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -35175,7 +35172,7 @@ class PdfApi(object):
 
     def put_html_in_storage_to_pdf_with_http_info(self, name, src_path, **kwargs):
         """
-        Convert HTML file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert HTML file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -35814,7 +35811,7 @@ class PdfApi(object):
 
     def put_image_in_storage_to_pdf(self, name, image_templates, **kwargs):
         """
-        Convert image file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert image file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -35842,7 +35839,7 @@ class PdfApi(object):
 
     def put_image_in_storage_to_pdf_with_http_info(self, name, image_templates, **kwargs):
         """
-        Convert image file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert image file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -37318,7 +37315,7 @@ class PdfApi(object):
 
     def put_markdown_in_storage_to_pdf(self, name, src_path, **kwargs):
         """
-        Convert MD file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert MD file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -37346,7 +37343,7 @@ class PdfApi(object):
 
     def put_markdown_in_storage_to_pdf_with_http_info(self, name, src_path, **kwargs):
         """
-        Convert MD file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert MD file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -37556,7 +37553,7 @@ class PdfApi(object):
 
     def put_mht_in_storage_to_pdf(self, name, src_path, **kwargs):
         """
-        Convert MHT file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert MHT file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -37590,7 +37587,7 @@ class PdfApi(object):
 
     def put_mht_in_storage_to_pdf_with_http_info(self, name, src_path, **kwargs):
         """
-        Convert MHT file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert MHT file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -38779,7 +38776,7 @@ class PdfApi(object):
 
     def put_pcl_in_storage_to_pdf(self, name, src_path, **kwargs):
         """
-        Convert PCL file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert PCL file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -38807,7 +38804,7 @@ class PdfApi(object):
 
     def put_pcl_in_storage_to_pdf_with_http_info(self, name, src_path, **kwargs):
         """
-        Convert PCL file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert PCL file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -38898,7 +38895,7 @@ class PdfApi(object):
 
     def put_pdf_a_in_storage_to_pdf(self, name, src_path, **kwargs):
         """
-        Convert PDFA file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert PDFA file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -38927,7 +38924,7 @@ class PdfApi(object):
 
     def put_pdf_a_in_storage_to_pdf_with_http_info(self, name, src_path, **kwargs):
         """
-        Convert PDFA file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert PDFA file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -43328,7 +43325,7 @@ class PdfApi(object):
 
     def put_ps_in_storage_to_pdf(self, name, src_path, **kwargs):
         """
-        Convert PS file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert PS file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -43356,7 +43353,7 @@ class PdfApi(object):
 
     def put_ps_in_storage_to_pdf_with_http_info(self, name, src_path, **kwargs):
         """
-        Convert PS file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert PS file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -45464,7 +45461,7 @@ class PdfApi(object):
 
     def put_svg_in_storage_to_pdf(self, name, src_path, **kwargs):
         """
-        Convert SVG file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert SVG file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -45500,7 +45497,7 @@ class PdfApi(object):
 
     def put_svg_in_storage_to_pdf_with_http_info(self, name, src_path, **kwargs):
         """
-        Convert SVG file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert SVG file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -45741,7 +45738,7 @@ class PdfApi(object):
 
     def put_te_x_in_storage_to_pdf(self, name, src_path, **kwargs):
         """
-        Convert TeX file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert TeX file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -45769,7 +45766,7 @@ class PdfApi(object):
 
     def put_te_x_in_storage_to_pdf_with_http_info(self, name, src_path, **kwargs):
         """
-        Convert TeX file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert TeX file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -46483,7 +46480,7 @@ class PdfApi(object):
 
     def put_web_in_storage_to_pdf(self, name, url, **kwargs):
         """
-        Convert web page to PDF format and upload resulting file to storage. 
+        Convert web page to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -46518,7 +46515,7 @@ class PdfApi(object):
 
     def put_web_in_storage_to_pdf_with_http_info(self, name, url, **kwargs):
         """
-        Convert web page to PDF format and upload resulting file to storage. 
+        Convert web page to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -46861,7 +46858,7 @@ class PdfApi(object):
 
     def put_xml_in_storage_to_pdf(self, name, src_path, **kwargs):
         """
-        Convert XML file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert XML file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -46890,7 +46887,7 @@ class PdfApi(object):
 
     def put_xml_in_storage_to_pdf_with_http_info(self, name, src_path, **kwargs):
         """
-        Convert XML file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert XML file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -46984,7 +46981,7 @@ class PdfApi(object):
 
     def put_xps_in_storage_to_pdf(self, name, src_path, **kwargs):
         """
-        Convert XPS file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert XPS file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -47012,7 +47009,7 @@ class PdfApi(object):
 
     def put_xps_in_storage_to_pdf_with_http_info(self, name, src_path, **kwargs):
         """
-        Convert XPS file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert XPS file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -47103,7 +47100,7 @@ class PdfApi(object):
 
     def put_xsl_fo_in_storage_to_pdf(self, name, src_path, **kwargs):
         """
-        Convert XslFo file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert XslFo file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -47131,7 +47128,7 @@ class PdfApi(object):
 
     def put_xsl_fo_in_storage_to_pdf_with_http_info(self, name, src_path, **kwargs):
         """
-        Convert XslFo file (located on storage) to PDF format and upload resulting file to storage. 
+        Convert XslFo file (located on storage) to PDF format and upload resulting file to storage.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
