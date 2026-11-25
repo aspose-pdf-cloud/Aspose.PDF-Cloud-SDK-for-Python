@@ -1,4 +1,3 @@
-import os
 import shutil
 import json
 import logging
@@ -48,7 +47,6 @@ class PdfSplitter:
             try:
                 temp_file = self.pdf_api.download_file(pageName)
                 local_path = Config.LOCAL_FOLDER / f"Page_{pageIndex}_{pageName}"
-                os.makedirs(os.path.dirname(local_path), exist_ok=True)
                 shutil.move(temp_file, str(local_path))
                 logging.info(f"download_result(): File successfully downloaded: {local_path}")
             except Exception as e:

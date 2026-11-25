@@ -7,7 +7,7 @@ from asposepdfcloud import ApiClient, PdfApi
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-credentials_file = Path("settings/credentials.json")
+credentials_file = Path("Settings/credentials.json")
 local_folder = Path(r"test_data")
 pdf_document = "output_sample.pdf"
 
